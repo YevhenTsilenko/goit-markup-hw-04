@@ -104,6 +104,7 @@ address {
 }
 
 .navigation-list-link {
+    padding: 32px 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.143;
@@ -511,7 +512,7 @@ address {
 
 .clients-list-link:hover,
 .clients-list-link:focus {
-    border: solid var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 .clients-list-link:hover .clients-list-link-icon,
@@ -633,8 +634,8 @@ address {
     letter-spacing: 0.03em;
     text-align: center;
     color: #212121;
-    cursor:pointer
-    
+    cursor:pointer;
+    border: none;
 }
 
 .portfolio-section-list-button:hover,
@@ -649,8 +650,9 @@ address {
 }
 
 .examples-list-link {
+    display: block;
     width: 100%;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
 }
