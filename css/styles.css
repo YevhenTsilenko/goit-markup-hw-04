@@ -127,40 +127,49 @@ address {
 
 .contact-list-item {
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
 }
 
+.contact-list-item:not(:first-child) {
+    margin-left: 30px;
+}
+
 .mail-icon {
-    margin-right: 10px;
     width: 16px;
     height: 12px;
-    fill: #757575;
+    margin-right: 10px;
+    fill: currentColor;
 }
 
 .contact-mail {
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.143;
     letter-spacing: 0.02em;
     color: #757575;
 }
+
+.header-mail {
+    display: flex;
+    align-items: center; 
+}
+
+.header-phone {
+    display: flex;
+    align-items: center; 
+}
+
 .contact-mail:hover,
 .contact-mail:focus {
     color: var(--accent-color);
 }
 
-.contact-mail:hover + .mail-icon,
-.contact-mail:focus + .mail-icon {
-    fill: var(--accent-color);
-}
-
 .phone-icon {
-    margin-right: 10px;
-    margin-left: 30px;
     width: 10px;
     height: 16px;
-    fill: #757575;
+    margin-right: 10px;
+    fill: currentColor;
 }
 
 .contact-phone {
@@ -176,16 +185,13 @@ address {
     color: var(--accent-color);
 }
 
-.contact-phone:hover + .phone-icon,
-.contact-phone:focus + .phone-icon {
-    fill: var(--accent-color);
-}
-
 /*======END HEADER======*/
 
 /*======HERO======*/
 
 .hero {
+    max-width: 1600px;
+    margin: 0 auto;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(
@@ -475,22 +481,28 @@ address {
 }
 
 .clients-icon-1 {
-    padding: 20px 63px;
+    width: 44px;
+    height: 49px;
 }
 .clients-icon-2 {
-    padding: 19px 65px;
+    width: 40px;
+    height: 52px;
 }
 .clients-icon-3 {
-    padding: 24px 63px;
+    width: 41px;
+    height: 43px;
 }
 .clients-icon-4 {
-    padding: 24px 45px;
+    width: 80px;
+    height: 42px;
 }
 .clients-icon-5{
-    padding: 22px 55px;
+    width: 59px;
+    height: 47px;
 }
 .clients-icon-6{
-    padding: 22px 41px;
+    width: 88px;
+    height: 45px;
 }
 
 .clients-list-link-icon {
@@ -512,6 +524,8 @@ address {
 /*======FOOTER======*/
 
 .footer {
+    margin: 0 auto;
+    max-width: 1600px;
     padding-top: 60px;
     padding-bottom: 60px;
     background: #2F303A;
@@ -607,24 +621,6 @@ address {
     margin-right: 8px;
 }
 
-.examples-list-item {
-    margin-bottom: 30px;
-    width: 370px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-    box-sizing: border-box;
-}
-
-.examples-list-item:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.examples-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .portfolio-section-list-button {
     min-width: 103px;
     height: 38px;
@@ -637,6 +633,8 @@ address {
     letter-spacing: 0.03em;
     text-align: center;
     color: #212121;
+    cursor:pointer
+    
 }
 
 .portfolio-section-list-button:hover,
@@ -645,17 +643,34 @@ address {
     color: #FFFFFF;
 }
 
+.examples-list-item {
+    margin-bottom: 30px;
+    width: 370px;
+}
+
+.examples-list-link {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+}
+
+.examples-list-link:hover,
+.examples-list-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.examples-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .examples-list-item:not(:nth-child(3n+3)) {
     margin-right: 30px;
 }
 
 .examples-list-name {
-margin-bottom: 4px;
-width: 322px;
-height: 36px;
-}
-
-.examples-list-name-link {
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -664,11 +679,6 @@ height: 36px;
 }
 
 .examples-list-item-section {
-width: 322px;
-height: 30px;
-}
-
-.examples-list-item-section-link {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.875;
